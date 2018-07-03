@@ -1,0 +1,11 @@
+# Tests that a node can be added.
+
+# Create a graph
+CreateGraph g
+
+# Add a node
+AddNode g n
+
+# Print the nodes in the graph
+ListNodes g
+ListChildren g n

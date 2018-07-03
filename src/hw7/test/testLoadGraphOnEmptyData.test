@@ -1,0 +1,10 @@
+# Test load a graph with no nodes.
+
+# Load graph
+LoadGraph empty empty.tsv
+
+# List nodes
+ListNodes empty
+
+# Find a nonexist minimum-cost path
+FindPath empty node1 node2

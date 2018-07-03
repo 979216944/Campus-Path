@@ -1,0 +1,11 @@
+# Test Dijkstra finding a path,
+# it prints two lines complaining,
+# "unknown character notFlower"
+# "unknown character notFlower"
+# if notFlower1 and notFlower2 are both not in graph.
+
+# load graph
+LoadGraph g flowers.tsv
+
+# find a minimum-cost path with both origin and dest node not in the graph
+FindPath g notFlower1 notFlower2

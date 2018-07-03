@@ -1,0 +1,35 @@
+# Test Dijkstra finding a shortest path.
+
+# Load graph
+loaded graph fruits
+
+# List Nodes
+fruits contains: apple cherry coconut grape orange pineapple
+
+# List Children
+the children of apple in fruits are: coconut(1.000) grape(0.500) orange(0.333) pineapple(1.000)
+the children of grape in fruits are: apple(0.500) cherry(1.000) coconut(1.000) orange(0.500) pineapple(1.000)
+the children of cherry in fruits are: grape(1.000) orange(1.000)
+the children of coconut in fruits are: apple(1.000) grape(1.000) orange(1.000) pineapple(1.000)
+the children of pineapple in fruits are: apple(1.000) coconut(1.000) grape(1.000) orange(1.000)
+
+# Find a minimum-cost path from apple to grape
+path from apple to grape:
+apple to grape with weight 0.500
+total cost: 0.500
+
+# Find a minimum-cost path from apple to cherry
+path from apple to cherry:
+apple to orange with weight 0.333
+orange to cherry with weight 1.000
+total cost: 1.333
+
+# Find a minimum-cost path from apple to coconut
+path from apple to coconut:
+apple to coconut with weight 1.000
+total cost: 1.000
+
+# Find a minimum-cost path from apple to pineapple
+path from apple to pineapple:
+apple to pineapple with weight 1.000
+total cost: 1.000

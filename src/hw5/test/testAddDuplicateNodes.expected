@@ -1,0 +1,17 @@
+# Tests that adding duplicate nodes does not affect and corrupt the graph.
+
+# Create graph
+created graph g
+
+# Add nodes to g
+added node a to g
+added node b to g
+added node c to g
+
+# Add Duplicate nodes to g
+added node a to g
+added node b to g
+added node c to g
+
+# List nodes and the outgoing edges
+g contains: a b c

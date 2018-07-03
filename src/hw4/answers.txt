@@ -1,0 +1,127 @@
+CSE 331 Homework 4.  Answers to Written questions.
+Edit this file to supply your answers.
+
+Name:  Yanmeng Kong(Anny)
+
+Problem 0.
+
+(a) 
+define r = p * q:
+	set r = 0
+	foreach term, t_q, in q:  // loop through terms in q
+		set t = p by making term-by-term copy of all terms  // t_t = t_p
+		foreach term, t_t, in t:  // loop through terms in t
+			replace t_t in t with the product of t_q and t_t  // t_t = t_t * t_q
+		set r = r + t
+
+(b)
+define r = p - q:
+	set r = q by making a term-by-term copy of all terms in q to r  // t_r = t_q
+	foreach term, t_r, in r:  //loop through terms in r
+		// t_r = -t_t => t_r = -t_q => r = -q
+		replace t_r in r with multiplication of t_r and -1  
+	set r = r + p
+
+define r = t_1 * v:
+	set r = 0
+	foreach term, t_v, in v:  // loop through terms in v
+		insert the product of t_1 and t_v into r  // t_r = t_1 * t_v
+
+define q = u / v:
+	set q = 0  // for quotient polynomial
+	set r = u by making a term-by-term copy of all items in u to r  // remainder polynomial
+	while first term(highest degree), r_1, in r has no less(>=) degree than first term(highest degree), v_1, in v:  // while d(r_1) >= d(v_1)
+		set t_1 = the division of r_1 / v_1 (single term division)  // temp single term
+		insert t_1 into q as a new term
+		set t = t_1 * v  // temp polynomial
+		set r = r - t  // update remainder
+
+
+(c)
+	u = (x^3+x-1)
+	v = (x+1)
+	q = 0
+	r = copy of u = (x^3+x-1)
+	while hile first term(highest degree), r_1, in r has no less(>=) degree than first term(highest degree), v_1, in v: 
+		Iteration 1(3 >= 1): r_1 = x^3, v_1 = x, r = (x^3+x-1), u = (x^3+x-1), v = (x+1), q = 0
+			t_1 = r_1/v_1 = x^2
+			q = x^2
+			t = t_1*v = x^2*(x+1) = (x^3+x^2)
+			r = (x^3+x-1)-(x^3+x^2) = (-x^2+x-1)
+		Iteration 2(2 >= 1): r_1 = -x^2, v_1 = x, r = (-x^2+x-1), u = (x^3+x-1), v = (x+1), q = x^2
+			t_1 = r_1/v_1 = -x
+			q = x^2-x
+			t = t_1*v = -x*(x+1) = (-x^2-x)
+			r = (-x^2+x-1)-(-x^2-x) = (2x-1)
+		Iteration 3(1 >= 1): r_1 = 2x, v_1 = x, r = (2x-1), u = (x^3+x-1), v = (x+1), q = (x^2-x)
+			t_1 = r_1/v_1 = 2
+			q = x^2-x+2
+			t = t_1*v = 2*(x+1) = (2x+2)
+			r = (2x-1)-(2x+2) = -3
+	We are done! q = (x^2-x+2)
+
+
+Problem 1.
+
+(a) Changes:
+	1. RatNum(n, d) - remove gcd part.
+	                - less code and more efficient (O(1) runtime).
+
+	2. checkRep()   - remove the check for reduced form.
+	                - less code, more efficient.
+
+	3. toString()   - add gcd inside to match spec.
+	                - more code, less efficient(gcd contains a loop).
+
+	4. equals()     - add gcd inside to return true for same rational number.
+	                - more code, less efficient(gcd contains a loop(O())).
+
+	5. hashcode()   - add gcd inside to return same hashcode for same rational number.
+	                - more code, less efficient(gcd contains a loop).
+
+
+(b) 1. Specifications of the methods: - lack @requires and @modifies clauses; 
+		                              - @return clauses fail because "this" has been mutated.
+	2. Specifications of the class:   - RatNum states "immutable" which is no longer true.
+
+
+(c) 1. RatNum is immutable and there are no methods ever modify a RatNum which violates its RI. 
+    2. an instance's fields are final, which can not be modified at all.
+    3. add, sub, mul, and div all create a new RatNum rather than modifying the original RatNum.
+
+
+Problem 2.
+
+(a) The end of constructors.
+Reasons: 1. RatTerm is immutable and there are no mutators in it.
+		 2. fields are final and methods would return a new RatTerm rather than modifying "this".
+
+
+(b) 1. checkRep()    - remove the check "zero coefficients have zero exponents".
+				     - less code, more efficient.
+
+	2. toString()    - add Zero condition.
+				     - more code, less efficient.
+
+	3. equals()      - add Zero condition.
+				     - more code, less efficient.
+
+	4. RatTerm(c, e) - remove first Zero condition.
+					 - less code, more efficient.
+
+
+(c) 1. checkRep()    - add the check "coeff.isNaN() ==> expt = 0".
+				     - more code, less efficient.
+
+	2. RatTerm(c, e) - add NaN condition to set all NaN's exp to 0.
+					 - more code, less efficient.
+
+    I prefer "coeff.equals(RatNum.ZERO) ==> expt = 0" since
+    we don't need a form of NaN good for arithmetic operations but we need it for ZERO, which improves efficiency and easier to implement.
+
+
+Problem 5.
+favorite polynomial equations: 1. 6*x^8-x^6+2*x^4+x^2+1
+							   2. x^5-x^3+7*x
+							   3. 7*x^7+7x+7 
+							   4. 7*x^8+77*x

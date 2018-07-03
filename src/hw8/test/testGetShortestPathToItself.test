@@ -1,0 +1,10 @@
+# Verify that the program correctly gets shortest path 
+# from a building to itself on campus map
+
+# find shortest path from CSE to CSE
+r
+CSE
+CSE
+
+# quit
+q

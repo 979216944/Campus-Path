@@ -1,0 +1,13 @@
+Menu:
+r to find a route
+b to see a list of all buildings
+q to quit
+
+Enter an option ('m' to see the menu): # Verify that the program prints one unknown building
+# with unknown origin building.
+
+# get shortest path with unknown origin building
+Abbreviated name of starting building: Abbreviated name of ending building: Unknown building: unknwon
+
+Enter an option ('m' to see the menu):
+# quit

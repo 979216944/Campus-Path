@@ -1,0 +1,11 @@
+# Test load a graph with one node.
+
+# Load graph
+LoadGraph oneNode oneNode.tsv
+
+# List nodes
+ListNodes oneNode
+ListChildren oneNode node1
+
+# Find a nonexist minimum-cost path
+FindPath oneNode node1 node2

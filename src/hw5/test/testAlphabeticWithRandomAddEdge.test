@@ -1,0 +1,24 @@
+# Tests that list edges in alphabetic order
+
+# Create graph
+CreateGraph g
+
+# Add nodes to g
+AddNode g a
+AddNode g b
+AddNode g c
+AddNode g d
+AddNode g e
+
+# Add Edges to g in random order
+AddEdge g a c ac
+AddEdge g a e ae
+AddEdge g a a aa
+AddEdge g a b ab
+AddEdge g a c acc
+AddEdge g a d ad
+AddEdge g a e aee
+AddEdge g a e aeee
+
+# List the children of a in g
+ListChildren g a

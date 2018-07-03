@@ -1,0 +1,13 @@
+# Test load a graph flowers correctly.
+
+# Load graph
+loaded graph flowers
+
+# check graph if it is loaded correctly
+flowers contains: Aconitum Alchemilla Astilbe Gaillardia Quince Verbena
+the children of Aconitum in flowers are: Alchemilla(garden A) Astilbe(garden A) Gaillardia(garden A) Gaillardia(garden B) Quince(garden A) Quince(garden B)
+the children of Alchemilla in flowers are: Aconitum(garden A) Astilbe(garden A) Gaillardia(garden A) Quince(garden A)
+the children of Astilbe in flowers are: Aconitum(garden A) Alchemilla(garden A) Gaillardia(garden A) Quince(garden A)
+the children of Gaillardia in flowers are: Aconitum(garden A) Aconitum(garden B) Alchemilla(garden A) Astilbe(garden A) Quince(garden A) Quince(garden B)
+the children of Quince in flowers are: Aconitum(garden A) Aconitum(garden B) Alchemilla(garden A) Astilbe(garden A) Gaillardia(garden A) Gaillardia(garden B)
+the children of Verbena in flowers are:

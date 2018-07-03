@@ -1,0 +1,36 @@
+CSE 331 Homework 3.  Answers to Written questions.
+Edit this file to supply your answers.
+
+Name:  Yanmeng Kong(Anny)
+
+Problem 6.
+
+(a) Problem: It threw an IllegalArgumentException for 0 but 0 is nonnegative. 
+	Fix: Change the first test to n < 0.
+
+
+(b) Problem: 0th Fib term should return 1 but it threw an IllegalArgumentException. 
+	Fix: same fix as a)
+
+
+(c) Problem: 1. 2nd Fib term should return 2 but it returns 1. 
+			 2. 2nd Fib term should return 2 but it returns 0.
+	Fix: 1. change the second test to n <= 1.
+		 2. change the statement in else case to getFibTerm(n - 1) + getFibTerm(n - 2).
+
+
+Problem 7. 
+(a) Problem: 1. Constructor: confusion in reference and needs to clarify the first one refers to the private field volume. 
+			 2. getVolume(): should return volume but returns 0.
+	Fix: 1. change the statement in constructor to ''this.volume = volume;''.
+		 2. change the return statement in getVolume() to ''return this.volume''.
+
+(b) Second approach is better.
+	Reason: the runtime for getVolume() would be O(1) instead of O(n).  
+	
+(c) Different approaches: 1. Use a collection(i.e.set, list) in addition to ballContainer to keep track of balls. Then, sort the collection as soon as adding a new ball. In other words, add to both ballContainer and the collection, remove from both, clear both, and return the iterator directly when getBallsFromSmallest() is called. 
+						  2. Use a collection(i.e.set, list) in addition to ballContainer to keep track of balls. Then, sort the collection when getBallsFromSmallest() is called.
+						  3. Put all balls in to ArrayList, and then use Collections.sort() with a ball comparator to sort list of balls when getBallsFromSmallest() is called. (My implementation)
+	
+I think 1 is better when calling getBallsFromSmallest() a lot, and 3 is best when getBallsFromSmallest() is rarely called and space is important.
+Reason: Method 1's runtime is O(1) for getBallsFromSmallest() while 2 needs at least O(n) or O(nlogn) depends on sort,  and 3 needs O(nlogn) since Collection.sort() uses mergesort which takes O(nlogn) runtime. But 1 and 2 use an extra data structure which takes extra O(n) space(twice space) while 3 does not.

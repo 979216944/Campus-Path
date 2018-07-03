@@ -1,0 +1,11 @@
+# Test load a graph with no nodes.
+
+# Load graph
+loaded graph empty
+
+# List nodes
+empty contains:
+
+# Find a nonexist path
+unknown character node1
+unknown character node2

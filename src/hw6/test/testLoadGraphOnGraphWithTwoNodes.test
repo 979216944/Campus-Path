@@ -1,0 +1,12 @@
+# Test load a graph with two nodes.
+
+# Load graph
+LoadGraph twoNodes twoNodes.tsv
+
+# List nodes and their children
+ListNodes twoNodes
+ListChildren twoNodes node1
+ListChildren twoNodes node2
+
+# Find a path from node1 to node2
+FindPath twoNodes node1 node2

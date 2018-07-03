@@ -1,0 +1,19 @@
+# Test that two nodes and four edges can be added.(complete graph)
+
+# Create a graph
+created graph g
+
+# Add two nodes
+added node a to g
+added node b to g
+
+# Add four edges
+added edge aa from a to a in g
+added edge bb from b to b in g
+added edge ab from a to b in g
+added edge ba from b to a in g
+
+# Print nodes and the outgoing edges from a and b
+g contains: a b
+the children of a in g are: a(aa) b(ab)
+the children of b in g are: a(ba) b(bb)

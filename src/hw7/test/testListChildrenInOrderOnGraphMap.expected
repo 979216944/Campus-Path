@@ -1,0 +1,13 @@
+# Test ListChildren in order without multiple edges
+
+# Load graph
+loaded graph map
+
+# ListChildren
+the children of location1 in map are: location2(1.000)
+the children of location2 in map are: location1(1.000) location3(1.000)
+the children of location3 in map are: location2(1.000) location4(1.000)
+the children of location4 in map are: location3(1.000) location5(1.000)
+the children of location5 in map are: location4(1.000) location6(1.000)
+the children of location6 in map are: location5(1.000) location7(1.000)
+the children of location7 in map are: location6(1.000)

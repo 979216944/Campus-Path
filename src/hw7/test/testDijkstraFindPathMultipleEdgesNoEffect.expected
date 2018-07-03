@@ -1,0 +1,27 @@
+# Test Dijkstra finding a path with multiple edges
+# the algorithm uses the least cost edge between two nodes
+# if there are multiple edges
+
+# Load graph
+loaded graph map
+
+# Add edge
+added edge 3.000 from location1 to location2 in map
+
+# Find a long path from location1 to location7 and the reverse
+path from location1 to location7:
+location1 to location2 with weight 1.000
+location2 to location3 with weight 1.000
+location3 to location4 with weight 1.000
+location4 to location5 with weight 1.000
+location5 to location6 with weight 1.000
+location6 to location7 with weight 1.000
+total cost: 6.000
+path from location7 to location1:
+location7 to location6 with weight 1.000
+location6 to location5 with weight 1.000
+location5 to location4 with weight 1.000
+location4 to location3 with weight 1.000
+location3 to location2 with weight 1.000
+location2 to location1 with weight 1.000
+total cost: 6.000

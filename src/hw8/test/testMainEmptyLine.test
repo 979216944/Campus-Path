@@ -1,0 +1,9 @@
+# Verify that the program simply echos empty lines.
+
+# one empty line
+
+# two empty lines
+
+
+# quit
+q

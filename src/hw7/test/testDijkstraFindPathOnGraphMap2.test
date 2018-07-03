@@ -1,0 +1,8 @@
+# Test Dijkstra finding a shortest path.
+
+# Load graph
+LoadGraph map2 map2.tsv
+
+# Find a minimum-cost path from location1 to location7 and the reverse
+FindPath map2 location1 location7
+FindPath map2 location7 location1

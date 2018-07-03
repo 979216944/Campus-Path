@@ -1,0 +1,12 @@
+# Test BFS finding a shortest path.
+
+# Load graph
+loaded graph map2
+
+# Find a shortest path from location1 to location7 and the reverse
+path from location1 to location7:
+location1 to location8 via road1
+location8 to location7 via road7
+path from location7 to location1:
+location7 to location8 via road7
+location8 to location1 via road1

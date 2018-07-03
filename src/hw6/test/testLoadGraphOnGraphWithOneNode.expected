@@ -1,0 +1,11 @@
+# Test load a graph with one node.
+
+# Load graph
+loaded graph oneNode
+
+# List nodes
+oneNode contains: node1
+the children of node1 in oneNode are:
+
+# Find a nonexist path
+unknown character node2

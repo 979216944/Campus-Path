@@ -1,0 +1,17 @@
+# Test ListChildren in order
+
+# Load graph
+loaded graph fruits
+
+# AddEdge
+added edge 3.000 from apple to orange in fruits
+added edge 4.000 from apple to orange in fruits
+added edge 5.000 from apple to orange in fruits
+
+# ListChildren
+the children of apple in fruits are: coconut(1.000) grape(0.500) orange(0.333) orange(3.000) orange(4.000) orange(5.000) pineapple(1.000)
+the children of orange in fruits are: apple(0.333) cherry(1.000) coconut(1.000) grape(0.500) pineapple(1.000)
+the children of coconut in fruits are: apple(1.000) grape(1.000) orange(1.000) pineapple(1.000)
+the children of cherry in fruits are: grape(1.000) orange(1.000)
+the children of grape in fruits are: apple(0.500) cherry(1.000) coconut(1.000) orange(0.500) pineapple(1.000)
+the children of pineapple in fruits are: apple(1.000) coconut(1.000) grape(1.000) orange(1.000)

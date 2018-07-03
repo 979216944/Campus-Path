@@ -1,0 +1,10 @@
+# Verify that the program prints two unknown buildings
+# with unknown origin and destination building.
+
+# get shortest path with both buildings unknown
+r
+unknown1
+unknown2
+
+# quit
+q

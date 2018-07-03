@@ -1,0 +1,223 @@
+CSE 331 Homework 5.  Answers to Written questions.
+Edit this file to supply your answers.
+
+Name:  Yanmeng kong(Anny)
+
+Problem 1. (Written exercises)
+
+(a) 
+
+IntQueue1:
+
+- AF: IntQueue1, q, represents the basic first-in, first-out queue for Integers 
+	contained in "entries":
+	q = entries = [n1, n2, ..., n_k] where k = entries.size().
+	
+	The first item n1, entries.get(0), is the least-recently-added item in 
+	the queue and is the next item to be removed; the last item n_k, 
+	entries.get(entries.size()-1) is the most-recently-added and will be 
+	the last of the current elements to be removed; the append operation 
+	adds a new item to index (k+1), the end of the queue.
+	
+	If there are no items, then the IntQueue represents an empty queue:
+	q = entries = [].
+	
+- RI: entries != null 
+	&& entries.get(i) != null for 0 <= i < entries.size()
+
+
+IntQueue2:
+
+- AF: IntQueue2, q, represents the basic first-in, first-out queue for Integers 
+	contained in "entries":
+	if entries = [n1, n2, ..., n_k] and front = i, size = n, 
+	then for front+size <= entries.length, 
+		q = [n_(i+1), ..., n__(i+n)],
+		q = [n_(i+1), ..., n_k, n1, ..., n_(k-i)].
+		
+	The first item, entries[front], is the least-recently-added item in 
+	the queue and is the next item to be removed; the last item, 
+	entries[(front+size-1)%entries.length] is the most-recently-added and will be 
+	the last of the current elements to be removed; the append operation 
+	adds a new item to index (front+size)%entries.length, the end of the queue.
+	
+	If there are no items, then the IntQueue represents an empty queue:
+	q = entries = [].
+	
+- RI: entries != null 
+	&& front >= 0 && front < entries.length 
+	&& size >= 0 && size <= entries.length
+	
+
+(b) a = d = g = [1, 2] are equivalent at the abstract level
+	b = h = [2, 3, 4] are equivalent at the abstract level
+	c = f = [1, 2, 3] are equivalent at the abstract level
+	e = [1, 2, 3, 4]
+	
+
+
+(c)
+1.public int solveEquations(int x, int y, int z)
+	No if this method accepts and returns only the primitive type int 
+	which is immutable.
+
+2.public String[] decode(boolean slowly)
+	Yes since String[] is mutable if it's not a copy.
+
+3.private Date myBirthday()
+	No if the private method can only used by implementors.
+
+4.public String toString()
+	Yes since String is immutable.
+
+5.public Iterator<Integer> elements()
+	Yes since Iterator has remove method and clients can remove 
+	elements from outside.
+
+6.public Deck(List<Card> cards)
+	Yes if cards passed into function Deck is mutable and is not a copy.
+
+
+Problem 2.  (Graph interface/operations)
+I created two classes DirectedGraph and LabeledEdge.
+Directed Graph are implemented as a HashMap mapping from start nodes 
+to a HashSet of edges in format of "(end,label)". 
+It could be represented as
+	node1->edge1(node1,label1)
+		 ->edge2(node2,label12)
+		 ->edge3(node3,label13)
+		 ...
+	node2->edge1(node2,label2)
+		 ->edge2(node3,label23)
+		 ->edge3(node3,label233)
+		 ...
+	...
+
+In this way, we could get edges of each node in O(1) time 
+and get all nodes by calling graph.keySet() in fast and easy way.
+
+DirectedGraph 
+  This graph stores all nodes and corresponding edges . 
+  Methods:
+	- DirectedGraph()
+	Creates an empty directed graph.
+	
+	- int size()
+	Gets size of this hashMap.
+	
+	- boolean isEmpty()
+	checks if this.graph is empty.
+	
+	- boolean containsNode(String n)
+	Checks if node n is in the graph.
+	
+	- boolean containsEdge(String start, String end, String label)
+	Checks if the specified edge is in the graph.
+	
+	- Set<String> getNodes()
+	Gets an unmodifiable set of nodes.
+	
+	- Set<LabeledEdge> getEdges(String n)
+	Gets an unmodifiable set of outwards edges of node n.
+	
+	- boolean addNode(String n)
+	Adds a new node n to the graph if it is not present. 
+	
+	- boolean addEdge(String start, String end, String label)
+	Adds a new edge to the graph with existing start nodes.
+	
+	- boolean removeNode(String n)
+	Removes an existing node.
+	
+	- LabeledEdge removeEdge(String start, String end, String label)
+	Removes an existing edge.
+	
+	- void clearAll() 
+	Clears all entries(nodes and edges) in the graph.
+	
+	- boolean equals(Object obj)
+	Standard equality operation.
+	
+	- int hashCode()
+	Standard hashCode function.
+	
+	- String toString()
+	Returns a string representation of this DirectedGraph.
+	
+	With these operations, clients can freely add/remove nodes and edges 
+	as well as traverse over all of the nodes and corresponding edges in 
+	the graph. Then, containsNode and containsEdge are needed so that the 
+	graph won't have duplicate nodes and edges.
+
+LabeledEdge 
+  This edge stores end node and label. 
+  Methods:
+    - LabeledEdge(String end, String label)
+    Creates a labeled edge.
+    
+    - String getLabel()
+    Gets the label of this LabeledEdge.
+    
+    - String getEnd()
+    Gets the end of this LabeledEdge.
+    
+    - int compareTo(LabeledEdge e)
+    Compares this object with the specified object for order.
+    
+    - boolean equals(Object o)
+    Standard equality operation.
+    
+    - int hashCode()
+    Standard hashCode function.
+    
+    - String toString()
+    Returns a string representation of this LabeledEdge.
+
+Problem 3.  (Testing strategy)
+	I used "0, 1, 2" strategy in designing tests. I designed several cases 
+	mostly for each public method. For instance, I have designed four graphs
+	with the first as an empty graph, second only containing a "" node, 
+	third only containing "a" node, and the last with three nodes and six 
+	edges (complex case).
+	
+	After testing each method individually, I made a big and complex test for
+	testing all operations to ensure them function normally when using them together.
+	
+	I used clear box testing and made some tests for null cases and exceptions
+	by using the knowledge of implementation.
+	
+	For Specification Tests, I used the black-box testing. These tests
+	are using merely the specification of graph class. For instance, ListNode 
+	will list nodes in alphabetic order and there are no node duplicates or 
+	edge duplicates.
+	
+	I added more tests for exceptions since I realized I missed some which may
+	cause methods fail if not checked properly. Also, some more null cases are 
+	added to make sure parameters passed in are not null.
+
+
+Problem 4.  (Representation)
+	For my graph:
+	It is implemented as a set of nodes stored as keys in HashMap, 
+	in which each node is associated with a HashSet of its outgoing 
+	edges. And each edge contains an end node and a label.
+	
+	It has O(1) time complexity for addNode, addEdge, and getNodes()
+	because HashMap is very fast and it's easy to get all nodes and its
+	corresponding outgoing edges which may be used in hw6. Also, it stores
+	no unnecessary information which saves space.
+
+	Advantages:
+	1.  As a collection of edges:
+	It does not have extra classes and only one data structure, 
+	which is small and saves space.
+
+	2. As an adjacency list, in which each node is associated 
+	with a list of its outgoing edges:
+	It is easier to get outgoing edges since they have already been
+	grouped for each node.
+
+	3.As an adjacency matrix, which explicitly represents, for every 
+	pair ⟨A,B⟩ of nodes, what edges there are (if any) from A to B:
+	It has O(1) time complexity when add/remove edge.
+

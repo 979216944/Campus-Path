@@ -1,0 +1,17 @@
+# Test ListChildren in order
+
+# Load graph
+LoadGraph fruits fruits.tsv
+
+# AddEdge
+AddEdge fruits apple orange 3.0
+AddEdge fruits apple orange 4.0
+AddEdge fruits apple orange 5.0
+
+# ListChildren
+ListChildren fruits apple
+ListChildren fruits orange
+ListChildren fruits coconut
+ListChildren fruits cherry
+ListChildren fruits grape
+ListChildren fruits pineapple

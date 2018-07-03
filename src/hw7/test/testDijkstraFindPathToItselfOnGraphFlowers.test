@@ -1,0 +1,11 @@
+# Test Dijkstra finding a path,
+# from a character in the dataset(flowers.tsv) to itself.
+
+# Load graph
+LoadGraph flowers flowers.tsv
+
+# Find a minimum-cost path to itself
+FindPath flowers Aconitum Aconitum
+FindPath flowers Alchemilla Alchemilla
+FindPath flowers Quince Quince
+FindPath flowers Gaillardia Gaillardia

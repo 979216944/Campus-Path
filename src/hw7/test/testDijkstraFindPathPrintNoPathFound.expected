@@ -1,0 +1,13 @@
+# Test Dijkstra finding a path.
+# Given two valid node arguments,
+# that have no path in the specified graph.
+
+# Load graph
+loaded graph flowers
+
+# Find a minimum-cost path with two valid node arguments,
+# that have no path in the specified graph
+path from Alchemilla to Verbena:
+no path found
+path from Verbena to Alchemilla:
+no path found

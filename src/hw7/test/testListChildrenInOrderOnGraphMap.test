@@ -1,0 +1,13 @@
+# Test ListChildren in order without multiple edges
+
+# Load graph
+LoadGraph map map.tsv
+
+# ListChildren
+ListChildren map location1
+ListChildren map location2
+ListChildren map location3
+ListChildren map location4
+ListChildren map location5
+ListChildren map location6
+ListChildren map location7

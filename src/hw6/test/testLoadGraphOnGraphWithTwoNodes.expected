@@ -1,0 +1,13 @@
+# Test load a graph with two nodes.
+
+# Load graph
+loaded graph twoNodes
+
+# List nodes and their children
+twoNodes contains: node1 node2
+the children of node1 in twoNodes are: node2(label1)
+the children of node2 in twoNodes are: node1(label1)
+
+# Find a path from node1 to node2
+path from node1 to node2:
+node1 to node2 via label1

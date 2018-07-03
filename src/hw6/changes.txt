@@ -1,0 +1,14 @@
+CSE 331 Homework 6.  Answers to Written questions.
+Edit this file to supply your answers.
+
+Name:  Yanmeng Kong(Anny)
+
+Briefly describe any changes made to your Graph ADT from HW5 and why 
+those changes were made below.  (See the HW6 assignment for details.)
+
+- I didn't change underlying implementation of DirectedGraph, because my implementation of HashMap and HashSet
+are both fast enough. But when I was declaring it, I used the type (like Map and Set) as it's more general to use.
+- I also changed the return type of removeEdge to make it more consistent.
+- In addition, I changed all exception cases to preconditions, which makes it easier to implement.
+- I updated my compareTo method in LabeledEdge by comparing ends first and labels next, 
+which is easier to use when sorting. Also, this change also corrects the sorting issue in hw5. 

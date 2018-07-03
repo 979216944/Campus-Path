@@ -1,0 +1,10 @@
+# Verify that the program prints one unknown building
+# with unknown destination building.
+
+# get shortest path with unknown destination building
+r
+CSE
+unknown
+
+# quit
+q

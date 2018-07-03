@@ -1,0 +1,8 @@
+# Test BFS finding a long path.
+
+# Load graph
+LoadGraph map map.tsv
+
+# Find a long path from location1 to location7 and the reverse
+FindPath map location1 location7
+FindPath map location7 location1

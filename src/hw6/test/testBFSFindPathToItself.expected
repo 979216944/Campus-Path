@@ -1,0 +1,11 @@
+# Test BFS finding a path,
+# from a character in the dataset(flowers.tsv) to itself.
+
+# Load graph
+loaded graph flowers
+
+# Find a path to itself
+path from Aconitum to Aconitum:
+path from Alchemilla to Alchemilla:
+path from Quince to Quince:
+path from Gaillardia to Gaillardia:

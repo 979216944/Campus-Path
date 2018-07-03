@@ -1,0 +1,4 @@
+# Test load a graph flowers.
+
+# Load graph
+LoadGraph flowers flowers.tsv

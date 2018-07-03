@@ -1,0 +1,15 @@
+# Test Dijkstra finding a path,
+# from a character in the dataset(flowers.tsv) to itself.
+
+# Load graph
+loaded graph flowers
+
+# Find a minimum-cost path to itself
+path from Aconitum to Aconitum:
+total cost: 0.000
+path from Alchemilla to Alchemilla:
+total cost: 0.000
+path from Quince to Quince:
+total cost: 0.000
+path from Gaillardia to Gaillardia:
+total cost: 0.000

@@ -1,0 +1,19 @@
+# Test that two nodes and four edges can be added.(complete graph)
+
+# Create a graph
+CreateGraph g
+
+# Add two nodes
+AddNode g a
+AddNode g b
+
+# Add four edges
+AddEdge g a a aa
+AddEdge g b b bb
+AddEdge g a b ab
+AddEdge g b a ba
+
+# Print nodes and the outgoing edges from a and b
+ListNodes g
+ListChildren g a
+ListChildren g b

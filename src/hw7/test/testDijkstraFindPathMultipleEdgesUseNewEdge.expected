@@ -1,0 +1,28 @@
+# Test Dijkstra finding a path with multiple edges.
+# if a new edge is added to your graph after it is initialized 
+# by processing the Marvel data, then the pathfinding algorithm 
+# should be able to use this new edge in its calculations.
+
+# Load graph
+loaded graph map
+
+# Add edge
+added edge 0.010 from location1 to location2 in map
+
+# Find a long path from location1 to location7 and the reverse
+path from location1 to location7:
+location1 to location2 with weight 0.010
+location2 to location3 with weight 1.000
+location3 to location4 with weight 1.000
+location4 to location5 with weight 1.000
+location5 to location6 with weight 1.000
+location6 to location7 with weight 1.000
+total cost: 5.010
+path from location7 to location1:
+location7 to location6 with weight 1.000
+location6 to location5 with weight 1.000
+location5 to location4 with weight 1.000
+location4 to location3 with weight 1.000
+location3 to location2 with weight 1.000
+location2 to location1 with weight 1.000
+total cost: 6.000

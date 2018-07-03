@@ -1,0 +1,8 @@
+# Test Dijkstra finding a path,
+# it prints one "unknown character notFlower" line, if notFlower is not in graph.
+
+# load graph
+LoadGraph g flowers.tsv
+
+# find a minimum-cost path with dest node no in the graph
+FindPath g notFlower Aconitum

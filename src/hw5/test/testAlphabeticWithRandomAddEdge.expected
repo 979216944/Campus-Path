@@ -1,0 +1,24 @@
+# Tests that list edges in alphabetic order
+
+# Create graph
+created graph g
+
+# Add nodes to g
+added node a to g
+added node b to g
+added node c to g
+added node d to g
+added node e to g
+
+# Add Edges to g in random order
+added edge ac from a to c in g
+added edge ae from a to e in g
+added edge aa from a to a in g
+added edge ab from a to b in g
+added edge acc from a to c in g
+added edge ad from a to d in g
+added edge aee from a to e in g
+added edge aeee from a to e in g
+
+# List the children of a in g
+the children of a in g are: a(aa) b(ab) c(ac) c(acc) d(ad) e(ae) e(aee) e(aeee)

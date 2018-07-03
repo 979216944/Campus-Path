@@ -1,0 +1,26 @@
+# Test Dijkstra finding a shortest path.
+
+# Load graph
+LoadGraph fruits fruits.tsv
+
+# List Nodes
+ListNodes fruits
+
+# List Children
+ListChildren fruits apple
+ListChildren fruits grape
+ListChildren fruits cherry
+ListChildren fruits coconut
+ListChildren fruits pineapple
+
+# Find a minimum-cost path from apple to grape
+FindPath fruits apple grape
+
+# Find a minimum-cost path from apple to cherry
+FindPath fruits apple cherry
+
+# Find a minimum-cost path from apple to coconut
+FindPath fruits apple coconut
+
+# Find a minimum-cost path from apple to pineapple
+FindPath fruits apple pineapple

@@ -1,0 +1,11 @@
+# Tests that a node can be added.
+
+# Create a graph
+created graph g
+
+# Add a node
+added node n to g
+
+# Print the nodes in the graph
+g contains: n
+the children of n in g are:

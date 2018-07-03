@@ -1,0 +1,13 @@
+# Test load a graph flowers correctly.
+
+# Load graph
+LoadGraph flowers flowers.tsv
+
+# check graph if it is loaded correctly
+ListNodes flowers
+ListChildren flowers Aconitum
+ListChildren flowers Alchemilla
+ListChildren flowers Astilbe
+ListChildren flowers Gaillardia
+ListChildren flowers Quince
+ListChildren flowers Verbena

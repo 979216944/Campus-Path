@@ -1,0 +1,26 @@
+CSE 331 Homework 8.  Answers to Written questions.
+Edit this file to supply your answers.
+
+Name:  Yanmeng Kong(Anny)
+
+Describe which parts of your code belong to the model, the view,
+the controller, or none of these.  (See the assignment for details.)
+
+Model:
+	Point, 
+	CampusPathsModel, 
+	CampusParser,
+	in main method of CampusPaths: the initialization of CampusPathsModel
+
+View:
+	In CampusPaths, methods:
+		showPrompt,
+		showMenu, 
+		getDirection, 
+		getShortestPath, 
+		listAllBuildings
+		in main method: lines associated with "println()"
+		
+Controller:
+	main method in CampusPaths is mainly a controller except lines 
+	associated with "println()" and the initialization of CampusPathsModel.

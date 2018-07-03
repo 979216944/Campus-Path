@@ -1,0 +1,25 @@
+# Tests that adding duplicate edges does not affect and corrupt the graph.
+
+# Create graph
+created graph g
+
+# Add nodes to g
+added node a to g
+added node b to g
+added node c to g
+
+# Add Edges to g
+added edge aa from a to a in g
+added edge ab from a to b in g
+added edge ac from a to c in g
+
+# Add Duplicate Edges to g
+added edge aa from a to a in g
+added edge ab from a to b in g
+added edge ac from a to c in g
+
+# List nodes and the outgoing edges
+g contains: a b c
+the children of a in g are: a(aa) b(ab) c(ac)
+the children of b in g are:
+the children of c in g are:

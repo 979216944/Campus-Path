@@ -1,0 +1,30 @@
+# Verify that the program correctly gets shortest path 
+# between two buildings on campus map
+
+# find shortest path from UBS to CSE
+r
+UBS
+CSE
+
+# find shortest path from MOR to CSE
+r
+MOR
+CSE
+
+# find shortest path from CSE to UBS
+r
+CSE
+UBS
+
+# find shortest path from CSE to MOR
+r
+CSE
+MOR
+
+# find shortest path from CSE to FSH
+r
+CSE
+FSH
+
+# quit
+q

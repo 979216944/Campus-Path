@@ -1,0 +1,14 @@
+# Tests that listNodes list nodes in alphabetic order
+
+# Create graph
+CreateGraph g
+
+# Add nodes to g in random order
+AddNode g e
+AddNode g c
+AddNode g a
+AddNode g d
+AddNode g b
+
+# Print nodes of g
+ListNodes g

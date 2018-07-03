@@ -1,0 +1,5 @@
+# Verify that the program prints correctly with an unknown command.
+c
+
+# quit
+q

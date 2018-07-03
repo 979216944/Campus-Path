@@ -1,0 +1,25 @@
+# Tests that adding duplicate edges does not affect and corrupt the graph.
+
+# Create graph
+CreateGraph g
+
+# Add nodes to g
+AddNode g a
+AddNode g b
+AddNode g c
+
+# Add Edges to g
+AddEdge g a a aa
+AddEdge g a b ab
+AddEdge g a c ac
+
+# Add Duplicate Edges to g
+AddEdge g a a aa
+AddEdge g a b ab
+AddEdge g a c ac
+
+# List nodes and the outgoing edges
+ListNodes g
+ListChildren g a
+ListChildren g b
+ListChildren g c

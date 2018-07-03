@@ -1,0 +1,13 @@
+# Test Dijkstra finding a path with multiple edges
+# the algorithm uses the least cost edge between two nodes
+# if there are multiple edges
+
+# Load graph
+LoadGraph map map.tsv
+
+# Add edge
+AddEdge map location1 location2 3.0
+
+# Find a long path from location1 to location7 and the reverse
+FindPath map location1 location7
+FindPath map location7 location1

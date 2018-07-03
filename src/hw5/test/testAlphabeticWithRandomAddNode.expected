@@ -1,0 +1,14 @@
+# Tests that listNodes list nodes in alphabetic order
+
+# Create graph
+created graph g
+
+# Add nodes to g in random order
+added node e to g
+added node c to g
+added node a to g
+added node d to g
+added node b to g
+
+# Print nodes of g
+g contains: a b c d e

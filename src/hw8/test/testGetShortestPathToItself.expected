@@ -1,0 +1,14 @@
+Menu:
+r to find a route
+b to see a list of all buildings
+q to quit
+
+Enter an option ('m' to see the menu): # Verify that the program correctly gets shortest path
+# from a building to itself on campus map
+
+# find shortest path from CSE to CSE
+Abbreviated name of starting building: Abbreviated name of ending building: Path from Paul G. Allen Center for Computer Science & Engineering to Paul G. Allen Center for Computer Science & Engineering:
+Total distance: 0 feet
+
+Enter an option ('m' to see the menu):
+# quit

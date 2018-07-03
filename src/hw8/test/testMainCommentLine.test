@@ -1,0 +1,9 @@
+# Verify that the program simply echos comment lines.
+
+# one comment line
+
+# two comment lines(1)
+# two comment lines(2)
+
+# quit
+q
